@@ -70,3 +70,11 @@ p {
 #graphic {
   margin: 0 auto;
 }
+
+#title {
+  text-align: center;
+}
+
+.chart {
+  text-align: center;
+}

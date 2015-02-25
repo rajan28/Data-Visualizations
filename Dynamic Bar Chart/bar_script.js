@@ -1,15 +1,15 @@
 var myData = [];
 //var myTitle = "Rankings Generated from the Trials of FDA Approved Drugs in 2012";
-var margins = {top: 0, right: 0, bottom: 10, left: 60};
+var margins = {top: 0, right: 0, bottom: 10, left: 45};
 var cHeight = 400 - margins.top - margins.bottom;
 var cWidth = 600 - margins.right - margins.left;
 var titleHeight = 50;
 var axisSpaceLeft = 50;
 var axisSpaceBottom = 50;
 
-//Populates myData w/ 50 random integers between 0 and 50
+//Populates myData w/ 50 random integers between 1 and 1000
 for (var i = 0; i < 50; i++) {
-	myData[i] = Math.floor(Math.random()*50);
+	myData[i] = Math.ceil(Math.random()*1000);
 }
 
 function sorter(data) {
@@ -130,7 +130,7 @@ var vAxis = d3.svg.axis()
 var vGuide = d3.select('svg').append('g')
 	vAxis(vGuide)
 
-vGuide.attr('transform', 'translate(60, 50)')
+vGuide.attr('transform', 'translate('+ margins.left +', '+ titleHeight +')')
 vGuide.selectAll('path')
 	.style({fill: 'none', stroke:"#000"})
 vGuide.selectAll('line')
