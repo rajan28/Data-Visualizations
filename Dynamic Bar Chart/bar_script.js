@@ -9,7 +9,7 @@ var axisSpaceBottom = 50;
 
 //Populates myData w/ 50 random integers between 1 and 1000
 for (var i = 0; i < 50; i++) {
-	myData[i] = Math.ceil(Math.random()*1000);
+	myData[i] = Math.ceil(Math.random()*100);
 }
 
 function sorter(data) {
@@ -63,7 +63,6 @@ var tooltip = d3.select('body')
 	  .style('-moz-border-radius', '12px')
 	  .style('border-radius', '12px')
 	  .style('opacity', 0)
-
 
 //The Chart
 var myChart = d3.select('.chart svg')
@@ -149,3 +148,11 @@ hGuide.selectAll('path')
 	.style({fill: 'none', stroke:"#000"})
 hGuide.selectAll('line')
 	.style({stroke:"#000"})
+
+/*
+
+I would like to do multiple additional things to this chart.
+It would be cool to add a better tooltip, with more information.
+Another idea is to bring in a 
+
+*/
