@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>My World Map Visualization</title>
+		<link rel="stylesheet" type="text/css" href="main.css">
+	</head>
+	<body>
+		
+		<div class="map-container">
+			<div id="worldmap"></div>
+		</div>
+
+
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/d3/3.5.3/d3.min.js"></script>
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/topojson/1.6.9/topojson.min.js"></script>
+		<script src="worldmap.min.js"></script>
+		<script>
+		    var map = new Datamap({
+		    	element: document.getElementById('worldmap'),
+				fills: {
+					traveledTo: "#4db380"
+				},
+				data: {
+					USA: { fillKey: "traveledTo" },
+					CAN: { fillKey: "traveledTo" },
+					CHE: { fillKey: "traveledTo" },
+					POL: { fillKey: "traveledTo" },
+					TUR: { fillKey: "traveledTo" },
+					DEU: { fillKey: "traveledTo" },
+					ITA: { fillKey: "traveledTo" },
+					IND: { fillKey: "traveledTo" },
+					FRA: { fillKey: "traveledTo" },
+					POL: { fillKey: "traveledTo" },
+					ESP: { fillKey: "traveledTo" },
+					DNK: { fillKey: "traveledTo" },
+					CZE: { fillKey: "traveledTo" },
+					EST: { fillKey: "traveledTo" },
+					SWE: { fillKey: "traveledTo" },
+					FIN: { fillKey: "traveledTo" },
+					ZAF: { fillKey: "traveledTo" },
+					ISL: { fillKey: "traveledTo" },
+					JOR: { fillKey: "traveledTo"},
+					GBR: { fillKey: "traveledTo"}
+				}
+				});
+
+				var colors = d3.scale.category10();
+
+				// window.setInterval(function() {
+				// 	basic_choropleth.updateChoropleth({
+				// 	USA: colors(Math.random() * 10),
+				// 	RUS: colors(Math.random() * 100),
+				// 	AUS: { fillKey: 'traveledTo' },
+				// 	BRA: colors(Math.random() * 50),
+				// 	CAN: colors(Math.random() * 50),
+				// 	ZAF: colors(Math.random() * 50),
+				// 	IND: colors(Math.random() * 50),
+				// 	});
+				// }, 2000);
+		</script>
+	</body>
+</html>
